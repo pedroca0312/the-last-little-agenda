@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="../bootstrap-4.1.0-dist/css/bootstrap-grid.min.css">
     <script type="text/javascript" src="../bootstrap-4.1.0-dist/js/bootstrap.bundle.min.js"></script>
 
-    <style type="text/css">@import url(../css/style_lista_atividade&usuario.css); </style>
+    <style type="text/css">@import url(../css/style_lista_atividade.css); </style>
 </head>
     <body>
     <h1 class="atividade">Lista de Atividades</h1>
