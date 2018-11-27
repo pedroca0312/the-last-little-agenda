@@ -28,6 +28,7 @@ h1 {
     color: black;
     margin-top: 10%;
     font-weight: bold;
+    font-size: 400%;
 }
 
 .btn-primary{
@@ -41,5 +42,7 @@ h1 {
 }
 
 body{
-    background-color: palegoldenrod;
+    background-image: url("../../imagens/calendario.png");
+    background-size: 100%;
+    background-attachment: fixed;
 }

@@ -59,6 +59,11 @@
 		border-color: #34ce57;
 	}
 
+	.btn-secondary:focus-visible	{
+		background-color: #34ce57;
+		border-color: #34ce57;
+	}
+
 	@media screen and (max-width: 980px) {
 
 		.tudo {
