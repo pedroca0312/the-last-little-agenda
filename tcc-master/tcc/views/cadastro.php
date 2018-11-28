@@ -36,7 +36,7 @@
 	
 	</div>
 
-        <h2>Usuario: </h2>
+        <h2>Senha: </h2>
 	<div id="senha">
 		
 		<input class="form-control inputLogin" type="password" name="senha" > <br> <br>
@@ -49,7 +49,23 @@
 		<input class="form-control inputLogin" type="password" name="confirma_senha" > <br> <br>
 	
 	</div>
-    
+
+        <div id="tipo_usuarios">
+
+            <?php
+            $tipo_usuarios = ['aluno','representante','professor','admin'];
+            ?>
+            <h2>Tipo de Usuário: </h2>
+            <select  class="btn btn-secondary dropdown-toggle" name="tipo_usuarios" id="tipo_usuarios"><?php foreach ($tipo_usuarios as $tipo_usuario): ?>
+
+                    <option value="<?= $tipo_usuario?>"><?= $tipo_usuario?></option>
+
+                <?php endforeach;?>
+
+            </select> <br> <br> <br>
+
+        </div>
+
         <h2>Turma: </h2>
         <div id="turma">
 

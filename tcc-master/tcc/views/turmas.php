@@ -9,7 +9,7 @@
 
     <?php foreach ($turmas as $turma): ?>
 <div id="turmas" >
-    <h2 href=""><?= $turma->nome?></h2>
+    <h2><a href="http://localhost/the-last-little-agenda-master/tcc-master/tcc/controlador/usuario.php?acao=ganhar_turma&turma=<?= $turma->id_turma ?>"> <?= $turma->nome?></a></h2>
 </div>
 
     <?php endforeach; ?>

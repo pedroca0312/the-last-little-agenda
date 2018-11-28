@@ -52,10 +52,11 @@ class CrudUsuario
         $usu[] = $usuario->getSenha();
         $usu[] = $usuario->getUsername();
         $usu[] = $usuario->turma;
+        $usu[] = $usuario->id_tipo_usuario;
 
 
 
-        $sql = "insert into usuario (nome,email,senha,username,id_turma) values ('".$usu[0]."','".$usu[1]."','".$usu[2]."','".$usu[3]."',".$usu[4].")";
+        $sql = "insert into usuario (nome,email,senha,username,id_turma,id_tipo_usuario) values ('".$usu[0]."','".$usu[1]."','".$usu[2]."','".$usu[3]."','".$usu[4]."','".$usu[5]."')";
 
         $res = $this->conexao->query($sql);
 

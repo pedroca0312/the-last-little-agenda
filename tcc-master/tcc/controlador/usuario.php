@@ -58,7 +58,7 @@ switch ($acao) {
             include '../views/cadastro.php';
         }
         if (isset($_POST['botao'])){
-            $usuario = new Usuario($_POST['nome'],$_POST['email'],$_POST['senha'],Null,$_POST['usuario'],$_POST['turma']);
+            $usuario = new Usuario($_POST['nome'],$_POST['email'],$_POST['senha'],Null,$_POST['usuario'],$_POST['turma'],$_POST['tipo_usuarios']);
         $res =  $crud->CadastrarUsuario($usuario);
 
         header('Location: usuario.php');
@@ -83,12 +83,20 @@ switch ($acao) {
 
         break;
 
+
+    case 'ganhar_turma' :
+
+        $_SESSION['id_turma'] = $_GET['turma'];
+        header('Location: ../fullcalendar-3.9.0/index.php');
+
+        break;
+
     case 'editar':
 
         $crud = new CrudUsuario();
 
         if(isset($_POST['edita'])) {
-            $usuario = new Usuario($_POST['nome'],$_POST['email'],$_POST['senha'],$_POST['id_usuario'],$_POST['username']);
+            $usuario = new Usuario($_POST['nome'],$_POST['email'],$_POST['senha'],$_POST['id_usuario'],$_POST['username'],$_POST['tipo_turma'],$_POST['tipo_usuarios']);
 
             $crud->editaUsuarios($usuario);
 
