@@ -7,7 +7,7 @@ require_once __DIR__."/../Models/TipoAtividade.php";
 <html xmlns="http://www.w3.org/1999/html">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../bootstrap-4.1.0-dist/css/bootstrap-grid.min.css">
     <script type="text/javascript" src="../bootstrap-4.1.0-dist/js/bootstrap.bundle.min.js"></script>
@@ -22,17 +22,19 @@ require_once __DIR__."/../Models/TipoAtividade.php";
     <div class="tudo">
     <h1>Cadastro de atividade</h1> <br><br>
 
+        <h2>Nome da Atividade: </h2>
   <div id="nome_atividade">
 
-      <input type="text" class="form-control inputLogin" name="nome_atividade" placeholder="Nome da Atividade" > <br><br>
+      <input type="text" class="form-control inputLogin" name="nome_atividade"> <br><br>
 
   </div>
+
         <div id="tipo_atividade">
 
             <?php
             $tipo_atividades = ['prova','trabalho','seminário','reunião','outros'];
             ?>
-
+            <h2>Tipo da Atividade: </h2>
             <select  class="btn btn-secondary dropdown-toggle" name="tipo_atividade" id="tipo_atividade"><?php foreach ($tipo_atividades as $tipo_atividade): ?>
 
                     <option value="<?= $tipo_atividade?>"><?= $tipo_atividade?></option>
@@ -43,6 +45,7 @@ require_once __DIR__."/../Models/TipoAtividade.php";
 
         </div>
 
+        <h2>Disciplina: </h2>
         <div id="disciplina">
 
             <select  class="btn btn-secondary dropdown-toggle" name="disciplina" id="disciplina"><?php foreach ($disciplinas as $disciplina): ?>
@@ -55,9 +58,10 @@ require_once __DIR__."/../Models/TipoAtividade.php";
 
         </div>
 
+        <h2>Data: </h2>
   <div id="data_previsao">
 
-      <input type="date" class="form-control inputLogin" name="data_previsao" ><br><br>
+      <input type="date" class="form-control inputLogin" name="data_previsao" placeholder="Data" ><br><br>
 
   </div>
 

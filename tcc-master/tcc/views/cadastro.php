@@ -15,36 +15,42 @@
     <div class="tudo">
     <h1>Cadastre-se</h1>
 
+        <h2>Nome Completo: </h2>
 	<div id="nome">
 		
-		<input class="form-control inputLogin" type="text" name="nome" placeholder="Nome Completo" > <br> <br>
+		<input class="form-control inputLogin" type="text" name="nome" > <br> <br>
 
 	</div>
 
+        <h2>Usuario: </h2>
 	<div id="usuario">
 		
-		<input class="form-control inputLogin" type="text" name="usuario" placeholder="Usuario" > <br> <br>
+		<input class="form-control inputLogin" type="text" name="usuario"> <br> <br>
 	
 	</div>
 
+        <h2>Email: </h2>
 	<div id="email">
 		
-		<input class="form-control inputLogin" type="email" name="email" placeholder="Email" > <br> <br>
+		<input class="form-control inputLogin" type="email" name="email"> <br> <br>
 	
 	</div>
 
+        <h2>Usuario: </h2>
 	<div id="senha">
 		
-		<input class="form-control inputLogin" type="password" name="senha" placeholder="Senha" > <br> <br>
+		<input class="form-control inputLogin" type="password" name="senha" > <br> <br>
 	
 	</div>
 
+        <h2>Confirmar Senha</h2>
 	<div id="confirma_senha">
 		
-		<input class="form-control inputLogin" type="password" name="confirma_senha" placeholder="Confirmar Senha" > <br> <br>
+		<input class="form-control inputLogin" type="password" name="confirma_senha" > <br> <br>
 	
 	</div>
-
+    
+        <h2>Turma: </h2>
         <div id="turma">
 
             <select  class="btn btn-secondary dropdown-toggle" name="turma" id="turma"><?php foreach ($turmas as $turma): ?>

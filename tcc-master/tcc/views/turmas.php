@@ -5,9 +5,13 @@
 </head>
 <body>
 <h1>Selecione sua turma (47 turmas)</h1>
-<div id="turmas">
-    <img src="../../imagens/imagens/logo-1.png">
-    <h2>3info3</h2>
+
+
+    <?php foreach ($turmas as $turma): ?>
+<div id="turmas" >
+    <h2 href=""><?= $turma->nome?></h2>
 </div>
+
+    <?php endforeach; ?>
 </body>
 </html>

@@ -37,7 +37,7 @@
                 defaultView: 'month',
                 themeSystem: 'bootstrap4',
                 themeName: 'cyborg',
-                eventColor: '#324edd',
+                eventColor: '#34ce57;',
 
 
             });

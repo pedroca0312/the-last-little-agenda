@@ -1,6 +1,9 @@
 <?php
 session_start();
+require_once '../Models/CrudUsuario.php';
 
+$crud = new CrudUsuario();
+$usuario = $crud->GetUsuario($_SESSION['id']);
 
 ?>
 
@@ -19,8 +22,10 @@ session_start();
 <h1>Turma:<?= $_SESSION['nome_turma'];?> <br><br>Nome:<?=$_SESSION['username'];?> <br><br></h1>
 
 <div id=CadastrarAtividade>
-    <a href="../controlador/atividade.php?acao=cadastrar"><button name="Cadastrar" type="submit" class="btn btn-secondary btn-lg">Cadastrar Atividade</button></a>
+    <?php if ($usuario->id_tipo_usuario == 3 or $usuario->id_tipo_usuario == 2){
+            echo '<a href="../controlador/atividade.php?acao=cadastrar"><button name="Cadastrar" type="submit" class="btn btn-secondary btn-lg">Cadastrar Atividade</button></a>
     <br> <br>
+';}?>
 
     <div id=CadastrarAtividade>
         <a href="../controlador/atividade.php?acao=listar"><button name="Lista" type="submit" class="btn btn-secondary btn-lg">Lista de Atividades</button></a>
@@ -32,5 +37,6 @@ session_start();
         <br> <br>
     </div>
 </div>
+
 </div>
 </body>

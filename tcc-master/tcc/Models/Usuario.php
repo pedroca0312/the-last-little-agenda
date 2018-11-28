@@ -8,9 +8,10 @@ class Usuario
     public $senha;
     public $id;
     public $turma;
+    public $id_tipo_usuario;
 
 
-    public function __construct($nome,$email,$senha,$id,$username,$turma)
+    public function __construct($nome,$email,$senha,$id,$username,$turma,$id_tipo_usuario)
     {
         $this->nome = $nome;
         $this->email= $email;
@@ -18,7 +19,23 @@ class Usuario
         $this->id= $id;
         $this->username = $username;
         $this->turma= $turma;
+        $this->id_tipo_usuario = $id_tipo_usuario;
+    }
 
+    /**
+     * @return mixed
+     */
+    public function getIdTipoUsuario()
+    {
+        return $this->id_tipo_usuario;
+    }
+
+    /**
+     * @param mixed $id_tipo_usuario
+     */
+    public function setIdTipoUsuario($id_tipo_usuario)
+    {
+        $this->id_tipo_usuario = $id_tipo_usuario;
     }
 
     public function getNome()

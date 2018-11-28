@@ -26,13 +26,19 @@ switch ($acao) {
                 if ($_POST['usuario'] == $usuario->username and $_POST['senha'] == $usuario->senha) {
 
                     $_SESSION['username']  = $usuario->username;
+                    $_SESSION['id'] = $usuario->id;
                     $_SESSION['id_turma'] = $usuario->turma;
                     $turma = $crud2->GetTurma($_SESSION['id_turma']);
                     $_SESSION['nome_turma'] = $turma->nome;
                     $_SESSION['esta_logado'] = true;
 //print_r($_SESSION['nome_turma']);
+                    if ($usuario->id_tipo_usuario == 3 or $usuario->id_tipo_usuario == 2){
+
+                        $turmas = $crud2->GetTurmas();
+                        include'../views/turmas.php';
+                    }else{
                     header('Location: ../fullcalendar-3.9.0/index.php');
-                }
+                }}
             }
         } else {
 
